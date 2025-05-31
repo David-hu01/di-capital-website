@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>基金滚动年收益</title>
   <style>
     body {
@@ -97,6 +98,51 @@
     .center-container .image-box {
       width: calc(50% - 30px); /* 与两列布局中的单个图片宽度一致 */
     }
+
+    /* 响应式布局设置 */
+    @media screen and (max-width: 768px) {
+      /* 手机端布局 */
+      body {
+        padding: 20px;
+      }
+      
+      .box {
+        padding: 20px;
+        margin: 10px;
+      }
+      
+      .container {
+        flex-direction: column;
+      }
+      
+      .image-gallery {
+        grid-template-columns: 1fr;  /* 手机端单列显示 */
+      }
+      
+      .image-box {
+        margin-bottom: 15px;
+      }
+      
+      h1 {
+        font-size: 1.2em;
+      }
+      
+      h2 {
+        font-size: 1em;
+      }
+    }
+    
+    /* 平板端布局 */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      
+      .box {
+        max-width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -108,34 +154,34 @@
     </div>
     
     <div class="image-gallery-7">
-      <img src="../images/DI Capital pitch book.008.jpeg" alt="DI Capital">
+      <img src="images/DI Capital pitch book.008.jpeg" alt="DI Capital">
     </div>
   </div>
 
   <div class="image-gallery">
     <div class="image-box">
-      <img src="../images/DI Capital pitch book.001.jpeg" alt="DI Capital">
+      <img src="images/DI Capital pitch book.001.jpeg" alt="DI Capital">
     </div>
     <div class="image-box">
-      <img src="../images/DI Capital pitch book.002.jpeg" alt="DI Capital">
+      <img src="images/DI Capital pitch book.002.jpeg" alt="DI Capital">
     </div>
     <div class="image-box">
-      <img src="../images/DI Capital pitch book.003.jpeg" alt="DI Capital">
+      <img src="images/DI Capital pitch book.003.jpeg" alt="DI Capital">
     </div>
     <div class="image-box">
-      <img src="../images/DI Capital pitch book.004.jpeg" alt="DI Capital">
+      <img src="images/DI Capital pitch book.004.jpeg" alt="DI Capital">
     </div>
     <div class="image-box">
-      <img src="../images/DI Capital pitch book.005.jpeg" alt="DI Capital">
+      <img src="images/DI Capital pitch book.005.jpeg" alt="DI Capital">
     </div>
     <div class="image-box">
-      <img src="../images/DI Capital pitch book.006.jpeg" alt="DI Capital">
+      <img src="images/DI Capital pitch book.006.jpeg" alt="DI Capital">
     </div> 
   </div>
 
   <div class="center-container">
     <div class="image-box">
-      <img src="../images/DI Capital pitch book.007.jpeg" alt="DI Capital">
+      <img src="images/DI Capital pitch book.007.jpeg" alt="DI Capital">
     </div>
   </div>
 </body>

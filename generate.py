@@ -56,11 +56,18 @@ output_html = template.render(
     return_rate=f"{return_rate:.2f}%",
     date=today.strftime("%Y-%m-%d"),
     tickers=", ".join(tickers),
-    nav=f"{nav:.2f}"  # 净值保留4位小数
+    nav=f"{nav:.2f}"
 )
 
-# 修改输出路径
+# 写入文件
 with open("docs/index.html", "w", encoding="utf-8") as f:
     f.write(output_html)
 
 print("✅ 页面生成完成：docs/index.html")
+
+'''
+python generate.py
+git add docs/index.html
+git commit -m "Add responsive design for mobile devices"
+git push origin main
+'''
