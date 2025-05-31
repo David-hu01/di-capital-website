@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>基金滚动年收益</title>
+  <title>DI Capital Pitch Book</title>
   <style>
     body {
       background: #f5f6fa;
@@ -94,9 +94,10 @@
       justify-content: center;
     }
 
-    /* 确保第7张图片的容器与其他图片box保持一致的宽度 */
     .center-container .image-box {
-      width: calc(50% - 30px); /* 与两列布局中的单个图片宽度一致 */
+      width: 100%;          /* 改为100%宽度 */
+      max-width: 500px;     /* 限制最大宽度 */
+      margin: 0 auto;       /* 居中显示 */
     }
 
     /* 响应式布局设置 */
@@ -121,6 +122,7 @@
       
       .image-box {
         margin-bottom: 15px;
+        width: calc(100% - 30px);  /* 确保所有图片box使用相同的宽度计算 */
       }
       
       h1 {
@@ -129,6 +131,16 @@
       
       h2 {
         font-size: 1em;
+      }
+      
+      .center-container {
+        padding: 10px;
+        margin: 15px auto;
+      }
+
+      .center-container .image-box {
+        width: calc(100% - 30px);  /* 与其他图片保持一致的宽度计算 */
+        margin: 0 15px;            /* 保持一致的边距 */
       }
     }
     
@@ -148,7 +160,7 @@
 <body>
   <div class="container">
     <div class="box">
-      <h1>📈 本基金过去一年滚动收益：{{ return_rate }}</h1>
+      <h1>📈 本基金年滚动收益：{{ return_rate }}</h1>
       <h1>📈 当前基金净值：{{ nav }}</h1>
       <h2>最近更新时间：{{ date }}</h2>
     </div>
